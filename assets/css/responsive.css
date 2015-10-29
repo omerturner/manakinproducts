@@ -44,7 +44,7 @@ Larger Screen
     }
 
     #product-detail-page-container {
-      margin: 50px 250px 0 250px;
+      margin: 50px 150px 0 150px;
     }
 
     .contact-page-container {
@@ -71,7 +71,11 @@ Larger Screen
     }
 
     .effects .img {
-      width: 29.333333%;
+      width: 32.333333%;
+    }
+
+    .about-page-container {
+      margin: 100px 200px 150px 200px;
     }
 
     .mobile-invisible {
