@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% load humanize %}
+
+{% load static from staticfiles %}
+
+{% block title %}Manikin | Homepage{% endblock %}
+
+{% block home %}selected{% endblock %}
+
+{% block wallpaper %}
+<div id="wallpaper">
+    <h5 style="font-size: 3em">"Quality is not an act, it is a habit"</h5>
+    <p>Aristotle</p>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div id="blog-container">
+  <h6>Manakin News</h6>  
+  {% for post in posts %}
+  <div class="post">
+      <div class="post-head">
+          <img class="publisher-icon" src="{{ post.publisher.profile_pic.url }}" alt="{{ post.publisher }}">
+          <div class="name-date">
+            <h2 class="publisher-name">{{ post.publisher }}</h2>          
+            <h3 class="post-date">{{ post.posted|naturaltime|capfirst }}</h3>
+          </div>
+      </div>
+      <div class="post-body">
+          <div class="post-pic" style="background: url('{{ MEDIA_URL }}{{ post.post_pic.url }}') no-repeat center/ cover"></div>
+          <h4 class="post-title">{{ post.title }}</h4>
+          <p class="post-text">{{ post.body }}</p>
+      </div>
+  </div>
+  {% endfor %}
+    
+</div>
+<div id="right-column">
+  <!-- Begin MailChimp Signup Form -->
+  <div id="mc_embed_signup">
+  <h4>Get Discounts, Gifts and More</h4>
+  <p>Sign up to our newsletter to get the latest news, sales and products</p>
+  <form action="//manakinproducts.us11.list-manage.com/subscribe/post?u=a1e0fa500772523128ea505f9&amp;id=28d03a4f15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    <!-- <label for="mce-EMAIL">Subscribe to our mailing list</label> -->
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="E-Mail" required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_a1e0fa500772523128ea505f9_28d03a4f15" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+  </form>
+  </div>  
+  <!--End mc_embed_signup-->
+  
+  <div id="social-links">
+    <h4>Visit Us on Our Social Networks</h4>
+    <div id="social-links-img">
+      <a class="social-img" href="https://www.twitter.com/ManakinProducts/" target="_blank">
+          <img src="{% static 'img/Twitter.ico' %}" alt="Twitter Logo" class="social-icon">
+      </a>
+      <a class="social-img" href="https://www.facebook.com/ManakinProducts/" target="_blank">
+          <img src="{% static 'img/Facebook.ico' %}" alt="Facebook Logo" class="social-icon">
+      </a>
+      <a class="social-img" href="https://www.pinterest.com/ManakinP/" target="_blank">
+          <img src="{% static 'img/Pinterest.ico' %}" alt="Pinterest Logo" class="social-icon">
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

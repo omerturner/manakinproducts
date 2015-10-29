@@ -1,0 +1,68 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'img/manakin_logo_title.png' %}" />
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo:400,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:700italic' rel='stylesheet' type='text/css'>
+        {% block css %}{% endblock %}
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js" defer></script>
+        {% block jquery %}{% endblock %}
+        <script src="{% static 'js/jquery.sticky-kit.min.js' %}" type="text/javascript" charset="utf-8" defer></script>
+        <script src="{% static 'js/app.js' %}" type="text/javascript" charset="utf-8" defer></script>
+        <script src="{% static 'js/mobile.js' %}" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+        <header>
+          <img src="{% static 'img/menu_button.png' %}" alt="Menu" id="menu-button-mobile">
+          <a href="{% url 'blog:posts' %}" id="logo">
+            <img src="{% static 'img/manakin_logo.png' %}" alt="Manakin Logo" id="logo-img">
+            <img src="{% static 'img/manakin_logo_mobile.png' %}" alt="Manakin Logo" id="logo-img-mobile">
+          </a>          
+          <nav id="top-nav">
+            <ul>
+              <li><a class="{% block home %}{% endblock %}" href="{% url 'blog:posts' %}">Home</a></li>
+              <li><a class="{% block products %}{% endblock %}" href="{% url 'products:products' %}">Products</a></li>
+              <li><a class="{% block about %}{% endblock %}" href="{% url 'views.about' %}">About Us</a></li>
+              <li><a class="{% block contact %}{% endblock %}" href="{% url 'contact:contact' %}">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        {% block wallpaper %}{% endblock %}
+        <section class="site-container">
+            {% block content %}{% endblock %}
+        </section>
+        <footer>
+            <nav id="footer-nav">
+                <ul>
+                  <li class="footer-li"><a href="{% url 'blog:posts' %}">Home</a></li>
+                  <li class="footer-li"><a href="{% url 'products:products' %}">Products</a></li>
+                  <li class="footer-li"><a href="{% url 'views.about' %}">About Us</a></li>
+                  <li><a href="{% url 'contact:contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://www.twitter.com/ManakinProducts/" target="_blank">
+                <img src="{% static 'img/twitter-wrap.png' %}" alt="Twitter Logo" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/ManakinProducts/" target="_blank">
+                <img src="{% static 'img/facebook-wrap.png' %}" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://www.pinterest.com/ManakinP/" target="_blank">
+                <img src="{% static 'img/pinterest-wrap.png' %}" alt="Pinterest Logo" class="social-icon">
+            </a>
+            <p>&copy; 2015 Manakin Products. All Rights Reserved.</p>
+          {% block js %}{% endblock %}
+          </footer>
+    </body>
+</html>
+
+

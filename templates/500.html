@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}Page unavailable{% endblock %}
+
+{% block home %}selected{% endblock %}
+
+{% block content %}
+<div class="sent-message-container">
+  <h3 class="sent-message">Page unavailable</h3>
+  <p>Sorry, but the requested page is unavailable due to a server hiccup.</p>
+  <p>Our engineers have been notified, so check back later.</p>
+</div>
+{% endblock %}

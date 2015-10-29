@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}Manikin | About Us{% endblock %}
+
+{% block about %}selected{% endblock %}
+
+{% block content %}
+<div class="about-page-container">
+  
+  <div class="about-left-col">
+    <h3>About Us</h3>
+    <p>Manakin products was founded in 2015 in order to deliver a <a href="{% url 'products:products' %}" id="hqp">High Quality Products</a> to it's costumers.</p>
+    <p>We devoted ourselves to creating the <br><a href="{% url 'products:products' %}" id="bbe">Best Buying Experience</a> for the smart buyer.</p>
+    <p>In Manakin, We work as a team in order to give a <br class="mobile-invisible"><a href="{% url 'contact:contact' %}" id="tcs">Top Customer Service</a> to all of our loyal customers. </p>
+  </div>
+  
+  <div class="about-right-col">
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+      <h4>Get Discounts, Gifts and More</h4>
+      <p>Sign up to our newsletter to get the latest news, sales and products</p>
+      <form action="//manakinproducts.us11.list-manage.com/subscribe/post?u=a1e0fa500772523128ea505f9&amp;id=28d03a4f15" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <!-- <label for="mce-EMAIL">Subscribe to our mailing list</label> -->
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="E-Mail" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_a1e0fa500772523128ea505f9_28d03a4f15" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+      </form>
+    </div>  
+  <!--End mc_embed_signup-->
+    
+    
+    
+    
+  </div>
+</div>
+{% endblock %}

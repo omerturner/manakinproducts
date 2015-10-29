@@ -1,0 +1,1 @@
+$("#right-column").stick_in_parent();

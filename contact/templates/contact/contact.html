@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block contact %}selected{% endblock %}
+
+{% block content %}
+<div class="contact-page-container">
+    <h1>Contact Us</h1>
+    <form class="contact-form" role="form" action="" method="post">
+        {% csrf_token %}
+        <div class="label-input">
+        {{ form.as_p }}
+        </div>
+        <button type="submit" class="contact-button">Send</button>
+    </form>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+{% endblock %}
+
+{% block jquery %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{% static 'js/modernizr.js' %}"></script>
+<script>
+    $(document).ready(function(){
+        if (window.matchMedia('(max-width: 40em)').matches) {
+          $(".img").addClass("hover");
+        }
+        if (Modernizr.touch) {
+            // show the close overlay button
+            $(".close-overlay").removeClass("hidden");
+            // handle the adding of hover class when clicked
+            $(".img").click(function(e){
+                if (!$(this).hasClass("hover")) {
+                    $(this).addClass("hover");
+                }
+            });
+            // handle the closing of the overlay
+            $(".close-overlay").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if ($(this).closest(".img").hasClass("hover")) {
+                    $(this).closest(".img").removeClass("hover");
+                }
+            });
+        } else {
+            // handle the mouseenter functionality
+            $(".img").mouseenter(function(){
+                $(this).addClass("hover");
+                $("#product-page-image").attr("src", $(this).find('img').attr("src"));
+            })
+            // handle the mouseleave functionality
+            .mouseleave(function(){
+                $(this).removeClass("hover");
+            });
+        }
+    });
+</script>
+{% endblock %}
+
+{% block products %}selected{% endblock %}
+
+{% block content %}
+<div id="product-detail-page-container">
+    <div class="left-col">
+      <div class="product-page-desc">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.description }}</p>
+          <a class="buy-button" href="{{ product.amz_link }}" target="_blank">Buy Now</a>
+      </div>
+    </div>
+    <div class="right-col" id="product-page-image-container">
+        <img id="product-page-image" src="{{ product.image.url }}" alt="{{ product.title }}">
+        <div id="effect-6" class="product-image-list effects clearfix">
+            <div class="img image-container">
+                <img class="img-list-item" src="{{ product.image.url }}" alt="{{ product.title }}">
+                <div class="overlay">
+                    <a href="{{ product.image.url }}" class="expand">+</a>
+                </div>
+            </div>
+            <div class="img image-container">
+                <img class="img-list-item" src="{{ product.image2.url }}" alt="{{ product.title }}">
+                <div class="overlay">
+                    <a href="{{ product.image2.url }}" class="expand">+</a>
+                </div>
+            </div>
+            <div class="img image-container">
+                <img class="img-list-item" src="{{ product.image3.url }}" alt="{{ product.title }}">
+                <div class="overlay">
+                    <a href="{{ product.image3.url }}" class="expand">+</a>
+                </div>
+            </div>
+            <div class="img image-container">
+                <img class="img-list-item" src="{{ product.image4.url }}" alt="{{ product.title }}">
+                <div class="overlay">
+                    <a href="{{ product.image4.url }}" class="expand">+</a>
+                </div>
+            </div>
+            <div class="img image-container">
+                <img class="img-list-item" src="{{ product.image5.url }}" alt="{{ product.title }}">
+                <div class="overlay">
+                    <a href="{{ product.image5.url }}" class="expand">+</a>
+                </div>
+            </div>
+            <div class="img image-container">
+                <img class="img-list-item" src="{{ product.image6.url }}" alt="{{ product.title }}">
+                <div class="overlay">
+                    <a href="{{ product.image6.url }}" class="expand">+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34160351-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'js/gallery.js' %}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+
+
+
+
+
+

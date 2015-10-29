@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}Products{% endblock %}
+
+{% block jquery %}
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+{% endblock %}
+
+{% block products %}selected{% endblock %}
+
+{% block content %}
+<div class="products-page-container">
+  <h3>Our Products</h3>
+  <div class="product-list">
+      {% for product in products %}
+      <div class="product" id="product-{{ product.pk }}">
+        {% if product.title == 'upcoming product' %}
+        <figure class="product-figure upcoming">
+            <img class="product-image" alt="{{ product.title }}" src="{{ product.image.url }}">
+            <figcaption>
+                <h3 class="product-title" style="color: #fff; margin-top: 35%; font-size: 1.6em;">Upcoming Product</h3>
+            </figcaption>
+        </figure>
+        {% else %}
+        <figure class="product-figure">
+            <img class="product-image" alt="{{ product.title }}" src="{{ product.image.url }}">
+            <figcaption>
+                <h3 class="product-title" style="color: #fff; margin-top: 18%; font-size: 1.6em;">{{ product.title }}</h3>
+    
+                <p>{{ product.short_description }}</p>
+    
+                <p><a href="{% url 'products:detail' pk=product.pk %}" class="product-link">View Product</a></p>
+            </figcaption>
+        </figure>
+        {% endif %}
+        
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+
+{% block js %}
+<script src="{% static 'js/products.js' %}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% endblock %}
+
+
+
+
+
+
+
+
