@@ -16,12 +16,23 @@
 {% endblock %}
 
 {% block content %}
+<div id="left-column">
+  <div class="new-arrival">
+    <h4>New Arrival</h4>
+    <a href="{% url 'products:detail' pk=product.pk %}" class="new-arrival-link">
+      <img class="new-arrival-img" alt="{{ product.title }}" src="{{ MEDIA_URL }}{{ product.image.url }}">
+      <p class="new-arrival-text">{{ product.title }}</p>
+      <button class="new-arrival-button">View Product</button>
+    </a>
+  </div>
+</div>
+
 <div id="blog-container">
   <h6>Manakin News</h6>  
   {% for post in posts %}
   <div class="post">
       <div class="post-head">
-          <img class="publisher-icon" src="{{ post.publisher.profile_pic.url }}" alt="{{ post.publisher }}">
+          <img class="publisher-icon" src="{{ MEDIA_URL }}{{ post.publisher.profile_pic.url }}" alt="{{ post.publisher }}">
           <div class="name-date">
             <h2 class="publisher-name">{{ post.publisher }}</h2>          
             <h3 class="post-date">{{ post.posted|naturaltime|capfirst }}</h3>
