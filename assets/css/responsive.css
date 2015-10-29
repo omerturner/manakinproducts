@@ -8,7 +8,7 @@ Larger Screen
 @media (min-width: 1600px) {
     .site-container {
       min-height: 500px; 
-      max-width: 1800px;
+      max-width: 1600px;
       margin: 0 auto;
     }
 
@@ -40,6 +40,7 @@ Larger Screen
 
     .products-page-container, {
       margin: 50px 450px 0 450px;
+      padding: 0 150px;
     }
 
     #product-detail-page-container {
@@ -47,7 +48,7 @@ Larger Screen
     }
 
     .contact-page-container {
-      margin: 50px 450px 0 450px;
+      margin: 30px 450px 185px 450px;
       padding: 0 150px;
     }
 
@@ -71,10 +72,6 @@ Larger Screen
 
     .effects .img {
       width: 29.333333%;
-    }
-
-    .contact-page-container {
-      margin: 30px 450px 185px 450px;
     }
 
     .mobile-invisible {
