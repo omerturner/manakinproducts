@@ -8,7 +8,7 @@ Larger Screen
 @media (min-width: 1600px) {
     .site-container {
       min-height: 500px; 
-      max-width: 1400px;
+      max-width: 1800px;
       margin: 0 auto;
     }
 
@@ -38,8 +38,17 @@ Larger Screen
       font-size: 1.6em;
     }
 
-    .products-page-container {
+    .products-page-container, {
+      margin: 50px 450px 0 450px;
+    }
+
+    #product-detail-page-container {
       margin: 50px 250px 0 250px;
+    }
+
+    .contact-page-container {
+      margin: 50px 450px 0 450px;
+      padding: 0 150px;
     }
 
     .image h4{
@@ -155,6 +164,13 @@ Mobile Screen
     display: none;
   }
   
+  #left-column {  
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
   #blog-container {
     width: 100%;
     padding: 0;
@@ -187,6 +203,15 @@ Mobile Screen
     box-sizing: border-box;
     margin: 0 0 50px 0;
     padding: 10%;
+  }
+  
+  #mc_embed_signup h4 {
+    font-size: 1.6em;
+  }
+  
+  .new-arrival {
+    padding-top: 0;
+    border-top: none;
   }
   
   #social-links {
@@ -403,7 +428,6 @@ Mobile Screen
 
 
 }
-
 
 
 
