@@ -20,7 +20,7 @@
   <div class="new-arrival">
     <h4>New Arrival</h4>
     <a href="{% url 'products:detail' pk=product.pk %}" class="new-arrival-link">
-      <img class="new-arrival-img" alt="{{ product.title }}" src="{{ MEDIA_URL }}{{ product.image.url }}">
+      <img class="new-arrival-img" alt="{{ product.title }}" src="{{ product.image.url }}">
       <p class="new-arrival-text">{{ product.title }}</p>
       <button class="new-arrival-button">View Product</button>
     </a>
@@ -32,14 +32,14 @@
   {% for post in posts %}
   <div class="post">
       <div class="post-head">
-          <img class="publisher-icon" src="{{ MEDIA_URL }}{{ post.publisher.profile_pic.url }}" alt="{{ post.publisher }}">
+          <img class="publisher-icon" src="{{ post.publisher.profile_pic.url }}" alt="{{ post.publisher }}">
           <div class="name-date">
             <h2 class="publisher-name">{{ post.publisher }}</h2>          
             <h3 class="post-date">{{ post.posted|naturaltime|capfirst }}</h3>
           </div>
       </div>
       <div class="post-body">
-          <div class="post-pic" style="background: url('{{ MEDIA_URL }}{{ post.post_pic.url }}') no-repeat center/ cover"></div>
+          <div class="post-pic" style="background: url('{{ post.post_pic.url }}') no-repeat center/ cover"></div>
           <h4 class="post-title">{{ post.title }}</h4>
           <p class="post-text">{{ post.body }}</p>
       </div>
