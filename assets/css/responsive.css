@@ -8,7 +8,7 @@ Larger Screen
 @media (min-width: 1600px) {
     .site-container {
       min-height: 500px; 
-      max-width: 1600px;
+      max-width: 100%;
       margin: 0 auto;
     }
 
@@ -38,8 +38,8 @@ Larger Screen
       font-size: 1.6em;
     }
 
-    .products-page-container, {
-      margin: 50px 450px 0 450px;
+    .products-page-container {
+      margin: 50px 300px 0 300px;
       padding: 0 150px;
     }
 
@@ -61,13 +61,11 @@ Larger Screen
     }
 
     #product-page-image{
-      width: 360px;
-      height: 360px;
+      width: 100%;
     }
    
     #product-page-image-container li img {
-      width: 58px;
-      height: 58px;
+      width: 33%;
     }
 
     .effects .img {

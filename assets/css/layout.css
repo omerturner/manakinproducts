@@ -11,7 +11,7 @@ body {
   display: block;
   min-height: 300px; 
   max-width: 100%;
-  margin: 0 5%;
+  margin: 0;
   padding: 0;
 }
 
@@ -180,7 +180,7 @@ nav a.selected, nav a:hover {
 
 
 /***********************************
-HomePage
+HomePage / Blog
 ***********************************/
 
 /* Hompage Image */
@@ -230,21 +230,21 @@ HomePage
   box-sizing: border-box;
   text-align: center;
   color: black;
-  width: 30%;
+  width: 25%;
   float: left;
-  padding: 0 60px;
+  padding: 0 30px;
 }
 
 #left-column h4{
-  margin: 0 0 5px 0;
-  font-size: 1.6em;
+  margin: 0;
+  font-size: 2em;
 }
 
 .new-arrival {
   text-align: center;
   border-bottom: solid 2px rgba(0,0,0, .1);
   margin-bottom: 50px;
-  padding: 10px 0 50px 0;
+  padding: 0 0 50px 0;
 }
 
 .new-arrival-img {
@@ -277,9 +277,15 @@ HomePage
 
 #blog-container{
   box-sizing: border-box;
-  width: 40%;
+  width: 50%;
   float: left;
-  padding: 0 2%;
+  padding: 0 5%;
+  border-left: solid 1px rgba(0,0,0, .1);
+  border-right: solid 1px rgba(0,0,0, .1);
+}
+
+#blog-container .post:last-child {
+  margin-bottom: 0;
 }
 
 #blog-container h6 {
@@ -369,9 +375,9 @@ HomePage
   box-sizing: border-box;
   text-align: center;
   color: black;
-  width: 30%;
+  width: 25%;
   float: right;
-  padding: 0 60px;
+  padding: 0 30px;
 }
 
 #right-column h4{
@@ -446,7 +452,7 @@ Products Page
 
 .products-page-container {
   text-align: center;
-  margin: 20px 250px 0 250px;
+  margin: 20px 300px 0 300px;
   color: white;
 }
 
@@ -591,7 +597,7 @@ Product Detail Page
   box-sizing: border-box;
   color: rgba(0,0,0, .8);
   margin: 0;
-  padding: 40px 200px 0 200px;
+  padding: 40px 250px 0 250px;
 }
 
 #product-detail-page-container:after { 
@@ -603,7 +609,7 @@ Product Detail Page
 
 .left-col{
   box-sizing: border-box;
-  width: 50%;
+  width: 55%;
   float: left;
   padding: 0;
 }
@@ -674,7 +680,7 @@ Product Detail Page
 
 .effects .img {
   position: relative;
-  width: 32.3333%;
+  width: 31.3333%;
   overflow: hidden;
   display: inline-block
 }
@@ -719,6 +725,7 @@ a.expand {
 }
 
 #effect-6 .overlay {
+  align-content: center;
   top: 0;
   bottom: 0;
   left: 0;
@@ -760,7 +767,7 @@ Contact Page
 ***********************************/
 
 .contact-page-container {
-  margin: 30px 350px 0 350px;
+  margin: 30px 400px 0 400px;
   color: rgba(0,0,0, .8);
 }
 
