@@ -4,7 +4,8 @@ from django.core.mail import EmailMessage
 from django.template import Context
 from .forms import ContactForm
 from .models import WebsiteContact
-# our view
+
+
 def contact(request):
     form_class = ContactForm
 
