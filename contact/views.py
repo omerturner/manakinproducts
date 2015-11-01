@@ -30,7 +30,7 @@ def contact(request):
             content = template.render(context)
 
             email_message = EmailMessage(
-                "New contact form submission",
+                "New contact form submission from {}".format(email),
                 content,
                 "manakinproducts.com" +'<support@manakinproducts.com>',
                 ['support@manakinproducts.com'],
