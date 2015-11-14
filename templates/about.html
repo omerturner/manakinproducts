@@ -1,6 +1,16 @@
 {% extends "layout.html" %}
 
+{% load static from staticfiles %}
+
 {% block title %}Manikin | About Us{% endblock %}
+
+{% block css %}
+<link href="{% static 'js/ply/ply.css' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block jquery %}
+<script src="{% static 'js/ply/Ply.min.js' %}" type="text/javascript" charset="utf-8" defer></script>
+{% endblock %}
 
 {% block about %}selected{% endblock %}
 
