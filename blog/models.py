@@ -5,7 +5,7 @@ from django.db import models
 class Publisher(models.Model):
     name = models.CharField(max_length=25, unique=True)
     profile_pic = models.ImageField(upload_to='', default='./no_image.png')
-    
+
     def __str__(self):
         return self.name
 
@@ -15,6 +15,9 @@ class Post(models.Model):
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
     post_pic = models.ImageField(upload_to='', default='./no_image.png')
     publisher = models.ForeignKey(Publisher)
-    
+    link = models.CharField(max_length=100, blank=True)
+    linkName = models.CharField(max_length=100, blank=True)
+
+
     def __str__(self):
         return self.title

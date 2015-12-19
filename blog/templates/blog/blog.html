@@ -36,24 +36,24 @@
 </div>
 
 <div id="blog-container">
-  <h6>Manakin News</h6>  
+  <h6>Manakin News</h6>
   {% for post in posts %}
   <div class="post">
       <div class="post-head">
           <img class="publisher-icon" src="{{ post.publisher.profile_pic.url }}" alt="{{ post.publisher }}">
           <div class="name-date">
-            <h2 class="publisher-name">{{ post.publisher }}</h2>          
+            <h2 class="publisher-name">{{ post.publisher }}</h2>
             <h3 class="post-date">{{ post.posted|naturaltime|capfirst }}</h3>
           </div>
       </div>
       <div class="post-body">
           <div class="post-pic" style="background: url('{{ post.post_pic.url }}') no-repeat center/ cover"></div>
           <h4 class="post-title">{{ post.title }}</h4>
-          <p class="post-text">{{ post.body }}</p>
+          <p class="post-text">{{ post.body }} <a href="{{post.link}}">{{post.linkName}}</a></p>
       </div>
   </div>
   {% endfor %}
-    
+
 </div>
 <div id="right-column">
   <!-- Begin MailChimp Signup Form -->
@@ -69,9 +69,9 @@
           <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
           </div>
       </form>
-  </div>  
+  </div>
   <!--End mc_embed_signup-->
-  
+
   <div id="social-links">
     <h4>Visit Us on Our Social Networks</h4>
     <div id="social-links-img">
