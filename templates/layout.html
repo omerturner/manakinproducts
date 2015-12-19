@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width">
         <title>{% block title %}{% endblock %}</title>
         <link rel="shortcut icon" href="{% static 'img/manakin_logo_title.png' %}" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
         <link rel="stylesheet" href="{% static 'css/layout.css' %}">
         <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
@@ -27,7 +29,7 @@
           <a href="{% url 'blog:posts' %}" id="logo">
             <img src="{% static 'img/manakin_logo.png' %}" alt="Manakin Logo" id="logo-img">
             <img src="{% static 'img/manakin_logo_mobile.png' %}" alt="Manakin Logo" id="logo-img-mobile">
-          </a>          
+          </a>
           <nav id="top-nav">
             <ul>
               <li><a class="{% block home %}{% endblock %}" href="{% url 'blog:posts' %}">Home</a></li>
