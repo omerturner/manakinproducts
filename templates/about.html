@@ -16,14 +16,14 @@
 
 {% block content %}
 <div class="about-page-container">
-  
+
   <div class="about-left-col">
     <h3>About Us</h3>
     <p>Manakin products was founded in 2015 in order to deliver a <a href="{% url 'products:products' %}" id="hqp">High Quality Products</a> to it's costumers.</p>
     <p>We devote ourselves to creating the <br><a href="{% url 'products:products' %}" id="bbe">Best Buying Experience</a> for the smart buyer.</p>
     <p>In Manakin, We work as a team in order to give a <br class="mobile-invisible"><a href="{% url 'contact:contact' %}" id="tcs">Top Customer Service</a> to all of our customers. </p>
   </div>
-  
+
   <div class="about-right-col">
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
@@ -38,12 +38,33 @@
             <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
           </div>
       </form>
-    </div>  
+    </div>
   <!--End mc_embed_signup-->
-    
-    
-    
-    
+  </div>
+
+</div>
+
+
+<div class="about-icons">
+  <div class="row">
+    <div class="col-sm-4 text-center">
+      <div class="service-box">
+        <i class="fa fa-4x fa-star text-primary"></i>
+        <h3>High Quality</h3>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center">
+      <div class="service-box">
+        <i class="fa fa-4x fa-shopping-cart text-primary"></i>
+        <h3>Easy Buying</h3>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center">
+      <div class="service-box">
+        <i class="fa fa-4x fa-group  text-primary"></i>
+        <h3>Top Customer Service</h3>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}

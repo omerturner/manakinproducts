@@ -9,16 +9,16 @@ body {
 
 .site-container {
   display: block;
-  min-height: 300px; 
+  min-height: 300px;
   max-width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.site-container:after { 
+.site-container:after {
    content: " ";
-   display: block; 
-   height: 0; 
+   display: block;
+   height: 0;
    clear: both;
 }
 
@@ -45,12 +45,12 @@ header{
 
 #logo {
   text-align: left;
-  margin-left: 60px; 
+  margin-left: 60px;
 }
 
 #logo-img{
   width: 270px;
-  margin-bottom: 15px;   
+  margin-bottom: 15px;
 }
 
 #logo-img-mobile {
@@ -72,7 +72,7 @@ NAVIGATION
 ***********************************/
 
 #top-nav {
-  float: right; 
+  float: right;
   padding: 0 30px 10px 30px;
 }
 
@@ -84,7 +84,7 @@ nav {
 nav ul {
   list-style: none;
   margin: 0 10px;
-  padding: 0; 
+  padding: 0;
 }
 
 nav li {
@@ -122,7 +122,7 @@ footer {
 #footer-nav ul {
   list-style: none;
   margin: 0 10px;
-  padding: 0; 
+  padding: 0;
 }
 
 #footer-nav li {
@@ -133,7 +133,7 @@ footer {
   border-right: 2px rgba(0,0,0, .1) solid;
 }
 
-#footer-nav a {  
+#footer-nav a {
   font-size: 1em;
   padding: 15px 10px;
   color: rgba(0,0,0, .3);
@@ -202,7 +202,7 @@ HomePage / Blog
   font-size: 3em; /* override on blog.html */
   font-family: 'Lato' ,'Arimo', sans-serif;
   background-color: rgba(229, 154, 19, .7);
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   padding: 8px 20px 8px 20px;
   display: inline;
 }
@@ -430,7 +430,7 @@ HomePage / Blog
 
 
 
-#social-links {  
+#social-links {
   border-bottom: solid 2px rgba(0,0,0, .1);
   margin: 50px 0;
 }
@@ -600,10 +600,10 @@ Product Detail Page
   padding: 40px 250px 0 250px;
 }
 
-#product-detail-page-container:after { 
+#product-detail-page-container:after {
    content: " ";
-   display: block; 
-   height: 0; 
+   display: block;
+   height: 0;
    clear: both;
 }
 
@@ -804,7 +804,7 @@ Contact Page
   margin: 100px 200px;
 }
 
-.sent-message {  
+.sent-message {
   color: rgba(0,0,0, .8);
   font-size: 1.7em;
 }
@@ -819,10 +819,10 @@ About Page
   margin: 50px 200px 100px 200px;
 }
 
-.about-page-container:after { 
+.about-page-container:after {
    content: " ";
-   display: block; 
-   height: 0; 
+   display: block;
+   height: 0;
    clear: both;
 }
 
@@ -843,12 +843,12 @@ About Page
   width: 30%;
 }
 
-.about-left-col h3 {  
+.about-left-col h3 {
   color: rgba(0,0,0, .8);
   font-size: 1.7em;
 }
 
-.about-left-col p {  
+.about-left-col p {
   color: rgba(0,0,0, .6);
   font-size: 1.2em;
   line-height: 2em;
@@ -865,5 +865,13 @@ About Page
 }
 
 
+.about-icons {
+  margin: -75px auto 100px auto;
+  max-width: 750px;
+  text-align: center;
+}
 
-
+.service-box {
+    margin: 50px auto 0;
+    max-width: 250px;
+}
