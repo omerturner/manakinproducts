@@ -674,6 +674,10 @@ Product Detail Page
 
 /* + overlay */
 
+.image-container a:hover {
+  text-decoration: none;
+}
+
 .effects {
   padding-left: 15px;
 }
@@ -714,7 +718,7 @@ a.expand {
   border: solid 3px #fff;
   text-align: center;
   color: #fff;
-  line-height: 50px;
+  line-height: 43px;
   font-weight: 700;
   font-size: 20px;
   -webkit-border-radius: 30px;
