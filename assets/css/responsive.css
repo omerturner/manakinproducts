@@ -291,6 +291,8 @@ Mobile Screen
 
   .buy-button {
     font-size: 1.5em;
+    width: 100%;
+    margin: 0;
   }
 
   .buy-button:hover {

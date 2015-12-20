@@ -52,13 +52,30 @@
 
 {% block content %}
 <div id="product-detail-page-container">
+
     <div class="left-col">
       <div class="product-page-desc">
           <h3>{{ product.title }}</h3>
-          <p>{{ product.description }}</p>
+          <p>
+            <b>Description:</b> <br>
+              {{ product.description }}<br>
+          </p>
+          <p>
+              <b>Features:</b><br>
+               {{ product.features }}
+          </p>
+          <p>
+              <b>Size:</b> {{ product.size }}
+          </p>
+          <p>
+              <b>Color:</b> {{ product.color }}
+          </p>
+        
+
           <a class="buy-button" href="{{ product.amz_link }}" target="_blank">Buy Now</a>
       </div>
     </div>
+
     <div class="right-col" id="product-page-image-container">
         <img id="product-page-image" src="{{ product.image.url }}" alt="{{ product.title }}">
         <div id="effect-6" class="product-image-list effects clearfix">

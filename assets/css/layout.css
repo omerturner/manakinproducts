@@ -597,7 +597,7 @@ Product Detail Page
   box-sizing: border-box;
   color: rgba(0,0,0, .8);
   margin: 0;
-  padding: 40px 250px 0 250px;
+  padding: 40px 150px 0 150px;
 }
 
 #product-detail-page-container:after {
@@ -609,7 +609,7 @@ Product Detail Page
 
 .left-col{
   box-sizing: border-box;
-  width: 55%;
+  width: 65%;
   float: left;
   padding: 0;
 }
@@ -618,14 +618,14 @@ Product Detail Page
   border: none;
   outline: none;
   box-sizing: border-box;
-  width: 100%;
+  width: 80%;
   color: white;
   display: block;
   background-color: rgb(95, 207, 128);
   border: solid 1.3px rgb(95, 207, 128);
   border-radius: 3px;
   padding: 15px 10px;
-  margin-right: 20px;
+  margin: 0 30px;
   text-align: center;
 }
 
@@ -642,17 +642,17 @@ Product Detail Page
 }
 
 .product-page-desc p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 2em;
   color: rgba(0,0,0, .6);
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .right-col{
   box-sizing: border-box;
-  width: 40%;
+  width: 30%;
   float: right;
   padding: 0;
 }
