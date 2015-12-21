@@ -397,10 +397,12 @@ HomePage / Blog
 
 #mc_embed_signup h4 {
   font-size: 1.5em;
+  color: rgba(0,0,0, .7);
 }
 
 #mc_embed_signup p{
   font-size: 1.1em;
+  color: rgba(0,0,0, .7);
 }
 
 #mce-EMAIL {
