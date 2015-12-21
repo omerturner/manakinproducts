@@ -2,7 +2,7 @@
 
 {% load static from staticfiles %}
 
-{% block title %}{{ product.title }}{% endblock %}
+{% block title %}Manakin | {{ product.title }} {{ product.sale_price }}${% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
