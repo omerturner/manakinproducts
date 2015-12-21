@@ -134,7 +134,7 @@ footer {
 }
 
 #footer-nav a {
-  font-size: 1em;
+  font-size: 1.3em;
   padding: 15px 10px;
   color: rgba(0,0,0, .3);
 }
@@ -333,13 +333,14 @@ HomePage / Blog
 .publisher-name {
     margin: 0;
     padding: 0;
-    font-size: 0.8em;
+    margin-bottom: 3px;
+    font-size: 1.1em;
 }
 
 .post-date {
     margin: 0;
     padding: 0;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 .post-pic {
@@ -395,11 +396,11 @@ HomePage / Blog
 }
 
 #mc_embed_signup h4 {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 #mc_embed_signup p{
-  font-size: 0.85em;
+  font-size: 1.1em;
 }
 
 #mce-EMAIL {
