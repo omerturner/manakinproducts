@@ -121,7 +121,7 @@ Mobile Screen
     width: 55%;
     box-sizing: border-box;
     margin-left: 35px;
-    padding-top: 7px;
+    padding-top: 12px;
     float: left;
   }
 
@@ -365,6 +365,11 @@ Mobile Screen
 
   #footer-nav {
     font-size: 1em;
+    padding: 10px;
+  }
+
+  #footer-nav a{
+    font-size: 1.3em;
   }
 
   .social-icon {
