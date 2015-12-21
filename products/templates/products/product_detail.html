@@ -65,13 +65,15 @@
                {{ product.features }}
           </p>
           <p>
-              <b>Size:</b> {{ product.size }}
+              <b>Size: </b><span class="product-attr">{{ product.size }}</span>
           </p>
           <p>
-              <b>Color:</b> {{ product.color }}
+              <b>Color: </b><span class="product-attr">{{ product.color }}</span>
+          </p>
+          <p>
+              <b>Price: </b><del class="product-attr">{{ product.price }}$</del><b class="product-attr">{{ product.sale_price }}$</b>
           </p>
         
-
           <a class="buy-button" href="{{ product.amz_link }}" target="_blank">Buy Now</a>
       </div>
     </div>

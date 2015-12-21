@@ -614,6 +614,10 @@ Product Detail Page
   padding: 0;
 }
 
+.product-attr {
+  padding-left: .5em;
+}
+
 .buy-button {
   border: none;
   outline: none;

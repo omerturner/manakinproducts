@@ -9,6 +9,8 @@ class Product(models.Model):
     features = models.TextField()
     size = models.CharField(max_length=25, blank=True)
     color = models.CharField(max_length=25, blank=True)
+    price = models.FloatField(default=999.9)
+    sale_price = models.FloatField(default=999.9)
     amz_link = models.URLField(max_length=255)
     order = models.IntegerField(default=999)
     image = models.ImageField(upload_to='', default='./no_image.png')
