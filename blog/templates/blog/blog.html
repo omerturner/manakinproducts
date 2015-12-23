@@ -47,7 +47,7 @@
           </div>
       </div>
       <div class="post-body">
-          <div class="post-pic" style="background: url('{{ post.post_pic.url }}') no-repeat center/ cover"></div>
+          <img class="post-pic img-responsive" src="{{ post.post_pic.url }}"/>
           <h4 class="post-title">{{ post.title }}</h4>
           <p class="post-text">{{ post.body }} <a href="{{post.link}}">{{post.linkName}}</a></p>
       </div>
