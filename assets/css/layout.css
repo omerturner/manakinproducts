@@ -7,6 +7,10 @@ body {
   font-family: 'Muli', brandon-grotesque, medium-content-sans-serif-font;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .site-container {
   display: block;
   min-height: 300px;
