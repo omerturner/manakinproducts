@@ -3,6 +3,7 @@ from django.db import models
 
 class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField()
     title = models.CharField(max_length=255)
     description = models.TextField()
     short_description = models.TextField()    

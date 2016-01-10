@@ -27,7 +27,7 @@
 <div id="left-column">
   <div class="new-arrival">
     <h4>New Arrival</h4>
-    <a href="{% url 'products:detail' pk=product.pk %}" class="new-arrival-link">
+    <a href="{% url 'products:detail' slug=product.slug %}" class="new-arrival-link">
       <img class="new-arrival-img" alt="{{ product.title }}" src="{{ product.image.url }}">
       <p class="new-arrival-text">{{ product.title }}</p>
       <button class="new-arrival-button">View Product</button>

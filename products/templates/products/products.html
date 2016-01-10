@@ -31,7 +31,7 @@
     
                 <p>{{ product.short_description }}</p>
     
-                <p><a href="{% url 'products:detail' pk=product.pk %}" class="product-link">View Product</a></p>
+                <p><a href="{% url 'products:detail' slug=product.slug %}" class="product-link">View Product</a></p>
             </figcaption>
         </figure>
         {% endif %}
