@@ -38,6 +38,7 @@ if not settings.DEBUG:
         'blog',
         'products',
         'contact',
+        'seo',
     )
 
     MIDDLEWARE_CLASSES = (
@@ -69,6 +70,7 @@ if not settings.DEBUG:
                     "django.core.context_processors.tz",
                     'django.contrib.auth.context_processors.auth',
                     'django.contrib.messages.context_processors.messages',
+                    'seo.views.get_seos',
                 ],
             },
         },
