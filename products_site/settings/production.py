@@ -113,9 +113,9 @@ if not settings.DEBUG:
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'assets'),
     )
-    STATIC_ROOT = '/home/manakinp/webapps/manakin_products_static/'
+    STATIC_ROOT = '/home/manakinp/webapps/manakin_products_static_cgi/'
 
-    MEDIA_ROOT='/home/manakinp/webapps/manakin_products_media/'
+    MEDIA_ROOT='/home/manakinp/webapps/manakin_products_media_cgi/'
     MEDIA_URL='/media/'
 
 
